@@ -1,0 +1,17 @@
+{
+  "theme": {
+    "dark": "تیره",
+    "switch-theme": "تغییر تم :",
+    "light": "روشن"
+  },
+  "home": {
+    "docs": "اسناد",
+    "docs-description": "جزئیات بیشتر درباره ویژگی‌ها و API Next.js را پیدا کنید.",
+    "SSG": "SSG",
+    "SSG-description": "Static Site Generation",
+    "SSR": "SSR",
+    "SSR-description": "Server Side Rendering",
+    "ISR": "ISR",
+    "ISR-description": "Incremental Static Regeneration"
+  }
+}
