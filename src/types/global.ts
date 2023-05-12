@@ -6,3 +6,19 @@ export interface ITokenData {
   expires: string;
   token: string;
 }
+
+export interface IAttributes {
+  _id: string;
+  title: string;
+  value: string;
+}
+
+export interface IProduct {
+  _id: string;
+  name: string;
+  image: string;
+  price: string;
+  description: string;
+  attributes: IAttributes[] | [];
+  companyId: string;
+}
