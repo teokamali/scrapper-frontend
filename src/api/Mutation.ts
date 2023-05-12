@@ -1,7 +1,6 @@
 import {
   IApiMutationParams,
   IBaseApiRequestBody,
-  IBaseApiResponse,
   IBaseApiResponseBody,
 } from './ApiType';
 
@@ -11,7 +10,7 @@ export const apiMutation = <
 >(
   params: IApiMutationParams<RESP, REQ>,
 ) =>
-  params.builder.mutation<IBaseApiResponse<RESP>, REQ>({
+  params.builder.mutation<RESP, REQ>({
     query: params.query,
     transformResponse: params.transformResponse,
   });

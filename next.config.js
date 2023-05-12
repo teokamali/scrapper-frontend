@@ -14,6 +14,9 @@ const nextConfig = withPWA({
   reactStrictMode: false,
   swcMinify: true,
   i18n,
+  images: {
+    domains: ['localhost'],
+  },
   env: {
     BASE_URL: process.env.BASE_URL,
     CURRENCY: process.env.CURRENCY,

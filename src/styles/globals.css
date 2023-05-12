@@ -12,3 +12,10 @@ body {
   color: rgb(0, 0, 0);
   background: whitesmoke;
 }
+.products-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+}

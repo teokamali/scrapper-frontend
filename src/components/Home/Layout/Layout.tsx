@@ -1,6 +1,7 @@
 import { useBaseComponent } from '@base/BaseComponent';
 import { IBaseProps } from '@base/BaseInterface';
 import { Header } from '../Header/Header';
+import { StyledMain } from './LayoutStyle';
 
 export const Layout = (props: IBaseProps) => {
   useBaseComponent<IBaseProps>({ props });
@@ -9,7 +10,7 @@ export const Layout = (props: IBaseProps) => {
   return (
     <div>
       <Header />
-      {children}
+      <StyledMain>{children}</StyledMain>
     </div>
   );
 };

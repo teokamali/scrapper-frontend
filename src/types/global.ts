@@ -14,7 +14,7 @@ export interface IAttributes {
 }
 
 export interface IProduct {
-  _id: string;
+  id: string;
   name: string;
   image: string;
   price: string;

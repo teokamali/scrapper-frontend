@@ -4,12 +4,6 @@ import { IRequestOption } from '@utils/Request/RequestType';
 
 export interface IBaseApiResponseBody {}
 
-export interface IBaseApiResponse<T extends IBaseApiResponseBody> {
-  status: string;
-  message: string;
-  data: T;
-}
-
 export interface IBaseApiRequestBody {}
 
 export interface IApiMutationParams<
@@ -18,5 +12,5 @@ export interface IApiMutationParams<
 > {
   builder: EndpointBuilder<BaseQueryFn<IRequestOption<T>>, any, any>;
   query(arg: T): IRequestOption<T>;
-  transformResponse?(data: IBaseApiResponse<R>): any;
+  transformResponse?(data: R): any;
 }
