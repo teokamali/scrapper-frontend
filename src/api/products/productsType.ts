@@ -1,11 +1,11 @@
 import { IProduct } from '@type/global';
 
 export interface IGetAllProductsResponse {
-  results: IProduct[];
   page: number;
   limit: number;
   totalPages: number;
   totalResults: number;
+  results: IProduct[];
 }
 export interface IGetAllProductsParams {
   limit?: number;

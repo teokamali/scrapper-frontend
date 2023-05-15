@@ -1,4 +1,4 @@
 import { productsApi } from './products/products';
-import { todoApi } from './todo/todo';
+import { searchApi } from './search/search';
 
-export const apiMiddleware = [todoApi.middleware, productsApi.middleware];
+export const apiMiddleware = [productsApi.middleware, searchApi.middleware];

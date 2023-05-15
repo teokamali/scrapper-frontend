@@ -1,21 +1,21 @@
-import { apiQuery } from '@api/Query';
-import { CreateBaseApiQuery } from '@base/Api/query/BaseApiQuery';
+import { axiosBaseQuery } from '@api/axiosBaseQuery';
 import { createApi } from '@reduxjs/toolkit/query/react';
 import { IGetAllProductsParams, IGetAllProductsResponse } from './productsType';
 
 export const productsApi = createApi({
   reducerPath: 'productsApi',
-  baseQuery: CreateBaseApiQuery({
-    preUrl: '/',
+  baseQuery: axiosBaseQuery({
+    baseUrl: '/',
   }),
   tagTypes: ['productsApi'],
   endpoints: (builder) => ({
-    getAllProducts: apiQuery<IGetAllProductsResponse, IGetAllProductsParams>({
-      builder,
+    getAllProducts: builder.mutation<
+      IGetAllProductsResponse,
+      IGetAllProductsParams
+    >({
       query: ({ limit, page }) => ({
-        url: '/',
+        url: '',
         method: 'GET',
-        sendAuthorization: false,
         headers: {
           'Content-Type': 'application/json',
           Accept: 'application/json',
@@ -29,4 +29,9 @@ export const productsApi = createApi({
   }),
 });
 
-export const { useGetAllProductsQuery } = productsApi;
+export const {
+  useGetAllProductsMutation,
+  util: { getRunningQueriesThunk },
+} = productsApi;
+
+export const { getAllProducts } = productsApi.endpoints;

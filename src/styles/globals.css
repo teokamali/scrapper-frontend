@@ -19,3 +19,21 @@ body {
   grid-column-gap: 5px;
   grid-row-gap: 5px;
 }
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.pagination li {
+  font-size: 14px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 1.8;
+}
+.pagination li.selected {
+  background-color: #ff5c31;
+  color: #fff;
+  border-radius: 100%;
+}

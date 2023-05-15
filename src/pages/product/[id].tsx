@@ -1,3 +1,3 @@
-export const SingleProduct = () => {
-  return <div>SingleProduct</div>;
-};
+export default function SinglePage() {
+  return <div>SinglePage</div>;
+}

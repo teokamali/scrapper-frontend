@@ -6,7 +6,6 @@ export default function Document() {
       <Head>
         <base href="/" />
         <meta charSet="utf-8" />
-        <link rel="manifest" href="/manifest.webmanifest" />
       </Head>
       <body>
         <Main />

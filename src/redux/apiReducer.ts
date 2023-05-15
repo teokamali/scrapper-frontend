@@ -1,7 +1,7 @@
 import { productsApi } from '@api/products/products';
-import { todoApi } from '@api/todo/todo';
+import { searchApi } from '@api/search/search';
 
 export const apiReducers = {
-  [todoApi.reducerPath]: todoApi.reducer,
   [productsApi.reducerPath]: productsApi.reducer,
+  [searchApi.reducerPath]: searchApi.reducer,
 };

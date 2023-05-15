@@ -1,19 +1,10 @@
 const { join } = require('path');
 const { ProvidePlugin } = require('webpack');
-const { i18n } = require('./next-i18next.config');
-
 /** @type {import('next').NextConfig} */
-const withPWA = require('next-pwa')({
-  dest: 'public',
-  register: true,
-  skipWaiting: true,
-  disableDevLogs: true,
-});
 
-const nextConfig = withPWA({
+const nextConfig = {
   reactStrictMode: false,
   swcMinify: true,
-  i18n,
   images: {
     domains: ['localhost'],
   },
@@ -46,6 +37,6 @@ const nextConfig = withPWA({
 
     return config;
   },
-});
+};
 
 module.exports = nextConfig;

@@ -6,6 +6,8 @@ import { IProductCardProps } from './ProductCardType';
 export const useProductCardHelper = (
   params: ICommonHelperParams<IProductCardProps, any>,
 ) => {
+  const { router } = params;
+
   const downloadImageHandler = async (url: string) => {
     try {
       const response = await axios.get(url, { responseType: 'blob' });
